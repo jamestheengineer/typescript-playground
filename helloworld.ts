@@ -19,9 +19,8 @@ v = 'string'; // no error as it can be "any" type
 Math.round(v); // no error as it can be "any" type
 console.log(v);
 
-// This is an industrial-grade general-purpose greeter function:
-function greet(person, date) {
-  console.log(`Hello ${person}, today is ${date}!`);
+function greet(person: string, date: Date) {
+  console.log(`Hello ${person}, today is ${date.toDateString()}!`);
 }
 
-greet('Brendan');
+greet('Maddison', new Date());
