@@ -24,3 +24,15 @@ function greet(person: string, date: Date) {
 }
 
 greet('Maddison', new Date());
+
+function getFavoriteNumber(): number {
+  return 26;
+}
+
+// No type annotations here, but TypeScript can spot the bug
+const names = ['Alice', 'Bob', 'Eve'];
+
+// Contextual typing for function
+names.forEach(function (s) {
+  console.log(s.toUpperCase());
+});
