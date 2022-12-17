@@ -36,3 +36,18 @@ const names = ['Alice', 'Bob', 'Eve'];
 names.forEach(function (s) {
   console.log(s.toUpperCase());
 });
+
+// The parameter's type annotation is an object type
+function printCoord(pt: { x: number; y: number }) {
+  console.log("The coordinate's x value is " + pt.x);
+  console.log("The coordinate's y value is " + pt.y);
+}
+printCoord({ x: 3, y: 7 });
+
+function printName(obj: { first: string; last?: string }) {
+  console.log('The value of first is ' + obj.first);
+  console.log('The value of last is ' + obj.last);
+}
+// Both OK
+printName({ first: 'Bob' });
+printName({ first: 'Alice', last: 'Alisson' });
