@@ -61,3 +61,14 @@ printId(101);
 printId('202');
 // Error
 // printId({ myID: 22342 });
+
+// Type assertions. Removed for traspiled code
+// const myCanvas = document.getElementById('main_canvas') as HTMLCanvasElement;
+
+function printText(s: string, alignment: 'left' | 'right' | 'center') {
+  console.log(s, alignment);
+}
+printText('Hello, world', 'left');
+
+//Error
+// printText("G'day, mate", 'centre');
