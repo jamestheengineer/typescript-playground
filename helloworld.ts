@@ -81,3 +81,10 @@ function doSomething(x: string | null) {
     console.log('Hello, ' + x.toUpperCase());
   }
 }
+
+function padLeft(padding: number | string, input: string) {
+  if (typeof padding === 'number') {
+    return ' '.repeat(padding) + input;
+  }
+  return padding + input;
+}
