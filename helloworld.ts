@@ -72,3 +72,12 @@ printText('Hello, world', 'left');
 
 //Error
 // printText("G'day, mate", 'centre');
+
+// With strictNullChecks to true, you need to check for null or undefined
+function doSomething(x: string | null) {
+  if (x === null) {
+    // do nothing
+  } else {
+    console.log('Hello, ' + x.toUpperCase());
+  }
+}
