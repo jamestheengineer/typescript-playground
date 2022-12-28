@@ -88,3 +88,7 @@ function padLeft(padding: number | string, input: string) {
   }
   return padding + input;
 }
+
+// both of these result in 'true'
+Boolean('hello'); // type: boolean, value: true
+!!'world'; // type: true,    value: true
