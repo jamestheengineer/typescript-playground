@@ -92,3 +92,14 @@ function padLeft(padding: number | string, input: string) {
 // both of these result in 'true'
 Boolean('hello'); // type: boolean, value: true
 !!'world'; // type: true,    value: true
+
+type Fish = { swim: () => void };
+type Bird = { fly: () => void };
+
+function move(animal: Fish | Bird) {
+  if ('swim' in animal) {
+    return animal.swim();
+  }
+
+  return animal.fly();
+}
