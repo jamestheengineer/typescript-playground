@@ -114,3 +114,23 @@ function printToConsole(s: string) {
 }
 
 greeter(printToConsole);
+
+type GreetFunction = (a: string) => void;
+function greeter2(fn: GreetFunction) {
+  fn('Hello, World');
+}
+
+type DescribableFunction = {
+  description: string;
+  (someArg: number): boolean;
+};
+
+let myFunc = <DescribableFunction>(
+  ((myNum: number) => (myNum > 8 ? true : false))
+);
+myFunc.description = 'This is a describable function type. Cool.';
+
+function doSomething2(fn: DescribableFunction) {
+  console.log(fn.description + ' returned ' + fn(6));
+}
+doSomething2(myFunc);
