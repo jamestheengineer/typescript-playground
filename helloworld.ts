@@ -133,4 +133,19 @@ myFunc.description = 'This is a describable function type. Cool.';
 function doSomething2(fn: DescribableFunction) {
   console.log(fn.description + ' returned ' + fn(6));
 }
+
 doSomething2(myFunc);
+
+// Generics to match input and output types
+function firstElement<Type>(arr: Type[]): Type | undefined {
+  return arr[0];
+}
+
+// Constraints
+function longest<Type extends { length: number }>(a: Type, b: Type) {
+  if (a.length >= b.length) {
+    return a;
+  } else {
+    return b;
+  }
+}
