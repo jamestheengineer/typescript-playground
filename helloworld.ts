@@ -149,3 +149,8 @@ function longest<Type extends { length: number }>(a: Type, b: Type) {
     return b;
   }
 }
+function f(x?: number) {
+  if (x) console.log(x.toFixed(3)); // 1 argument
+}
+f(); // OK
+f(10); // OK
