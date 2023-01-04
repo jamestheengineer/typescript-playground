@@ -167,3 +167,9 @@ function makeDate(mOrTimestamp: number, d?: number, y?: number): Date {
 const d1 = makeDate(12345678);
 const d2 = makeDate(5, 5, 5);
 // const d3 = makeDate(1, 3); nope, not allowed
+
+function multiply(n: number, ...m: number[]) {
+  return m.map((x) => n * x);
+}
+// 'a' gets value [10, 20, 30, 40]
+const a = multiply(10, 1, 2, 3, 4);
