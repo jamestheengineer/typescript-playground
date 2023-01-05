@@ -173,3 +173,19 @@ function multiply(n: number, ...m: number[]) {
 }
 // 'a' gets value [10, 20, 30, 40]
 const a = multiply(10, 1, 2, 3, 4);
+
+// Objects
+type Shape = {
+  sides: string;
+  color: string;
+};
+
+interface PaintOptions {
+  shape: Shape;
+  xPos?: number;
+  yPos?: number;
+}
+
+function paintShape(opts: PaintOptions) {
+  // ...
+}
