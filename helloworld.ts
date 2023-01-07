@@ -201,3 +201,15 @@ function doSomething3(obj: SomeType) {
   // But we can't re-assign it.
   // obj.prop = "hello";
 }
+
+interface BasicAddress {
+  name?: string;
+  street: string;
+  city: string;
+  country: string;
+  postalCode: string;
+}
+
+interface AddressWithUnit extends BasicAddress {
+  unit: string;
+}
