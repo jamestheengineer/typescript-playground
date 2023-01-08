@@ -213,3 +213,12 @@ interface BasicAddress {
 interface AddressWithUnit extends BasicAddress {
   unit: string;
 }
+
+interface Colorful {
+  color: string;
+}
+interface Circle {
+  radius: number;
+}
+
+type ColorfulCircle = Colorful & Circle;
