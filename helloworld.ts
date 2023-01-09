@@ -233,3 +233,13 @@ let box: Box<string>;
 function setContents<Type>(box: Box<Type>, newContents: Type) {
   box.contents = newContents;
 }
+
+// Typing Types let you do more than just interface things
+type BoxType<Type> = {
+  contents: Type;
+};
+
+type OrNull<Type> = Type | null;
+type OneOrMany<Type> = Type | Type[];
+type OneOrManyOrNull<Type> = OrNull<OneOrMany<Type>>;
+type OneOrManyOrNullStrings = OneOrManyOrNull<string>;
