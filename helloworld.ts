@@ -222,3 +222,14 @@ interface Circle {
 }
 
 type ColorfulCircle = Colorful & Circle;
+
+// Type system (kinda like generics)
+interface Box<Type> {
+  contents: Type;
+}
+
+let box: Box<string>;
+
+function setContents<Type>(box: Box<Type>, newContents: Type) {
+  box.contents = newContents;
+}
