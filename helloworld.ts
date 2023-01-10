@@ -243,3 +243,16 @@ type OrNull<Type> = Type | null;
 type OneOrMany<Type> = Type | Type[];
 type OneOrManyOrNull<Type> = OrNull<OneOrMany<Type>>;
 type OneOrManyOrNullStrings = OneOrManyOrNull<string>;
+
+function doStuff(values: readonly string[]) {
+  // We can read from 'values'...
+  const copy = values.slice();
+  console.log(`The first value is ${values[0]}`);
+
+  // ...but we can't mutate 'values'.
+  // values.push("hello!");
+}
+// You can have N number of elements in a tuple using "rest eleements"
+type StringNumberBooleans = [string, number, ...boolean[]];
+type StringBooleansNumber = [string, ...boolean[], number];
+type BooleansStringNumber = [...boolean[], string, number];
