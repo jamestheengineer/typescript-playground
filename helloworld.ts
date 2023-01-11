@@ -256,3 +256,10 @@ function doStuff(values: readonly string[]) {
 type StringNumberBooleans = [string, number, ...boolean[]];
 type StringBooleansNumber = [string, ...boolean[], number];
 type BooleansStringNumber = [...boolean[], string, number];
+
+// Generics
+function identity<Type>(arg: Type): Type {
+  return arg;
+}
+
+let output = identity<string>('myString');
