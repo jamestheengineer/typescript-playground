@@ -285,3 +285,31 @@ function loggingIdentity<Type extends Lengthwise>(arg: Type): Type {
   console.log(arg.length); // Now we know it has a .length property, so no more error
   return arg;
 }
+
+// Generics and protoypes
+class BeeKeeper {
+  hasMask: boolean = true;
+}
+
+class ZooKeeper {
+  nametag: string = 'Mikle';
+}
+
+class Animal {
+  numLegs: number = 4;
+}
+
+class Bee extends Animal {
+  keeper: BeeKeeper = new BeeKeeper();
+}
+
+class Lion extends Animal {
+  keeper: ZooKeeper = new ZooKeeper();
+}
+
+function createInstance<A extends Animal>(c: new () => A): A {
+  return new c();
+}
+
+createInstance(Lion).keeper.nametag;
+createInstance(Bee).keeper.hasMask;
