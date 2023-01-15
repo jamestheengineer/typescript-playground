@@ -313,3 +313,22 @@ function createInstance<A extends Animal>(c: new () => A): A {
 
 createInstance(Lion).keeper.nametag;
 createInstance(Bee).keeper.hasMask;
+
+// Classes
+class Point {
+  x: number;
+  y: number;
+}
+
+const pt = new Point();
+pt.x = 0;
+pt.y = 0;
+
+// Best to add a constructor to classes
+class GoodGreeter {
+  name: string;
+
+  constructor() {
+    this.name = 'hello';
+  }
+}
