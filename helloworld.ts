@@ -353,3 +353,20 @@ class Greeter {
 }
 const g = new Greeter();
 // g.name = "also not ok";
+
+interface Pingable {
+  ping(): void;
+}
+
+class Sonar implements Pingable {
+  ping() {
+    console.log('ping!');
+  }
+}
+
+// No bueno
+class Ball implements Pingable {
+  pong() {
+    console.log('pong!');
+  }
+}
