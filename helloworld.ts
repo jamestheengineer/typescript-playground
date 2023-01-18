@@ -365,8 +365,29 @@ class Sonar implements Pingable {
 }
 
 // No bueno
-class Ball implements Pingable {
-  pong() {
-    console.log('pong!');
+//class Ball implements Pingable {
+//  pong() {
+//    console.log('pong!');
+//  }
+//}
+
+// Basic inheritence
+class Animal2 {
+  move() {
+    console.log('Moving along!');
   }
 }
+
+class Dog extends Animal2 {
+  woof(times: number) {
+    for (let i = 0; i < times; i++) {
+      console.log('woof!');
+    }
+  }
+}
+
+const d = new Dog();
+// Base class method
+d.move();
+// Derived class method
+d.woof(3);
