@@ -415,3 +415,20 @@ class DogHouse extends AnimalHouse {
     super(dog);
   }
 }
+
+abstract class Base {
+  abstract getName(): string;
+
+  printName() {
+    console.log('Hello, ' + this.getName());
+  }
+}
+
+class Derived extends Base {
+  getName() {
+    return 'world';
+  }
+}
+
+const derive = new Derived();
+derive.printName();
