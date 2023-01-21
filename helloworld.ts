@@ -432,3 +432,18 @@ class Derived extends Base {
 
 const derive = new Derived();
 derive.printName();
+
+// js is duck typing
+class Person {
+  name: string;
+  age: number;
+}
+
+class Employee {
+  name: string;
+  age: number;
+  salary: number;
+}
+
+// OK
+const p: Person = new Employee();
