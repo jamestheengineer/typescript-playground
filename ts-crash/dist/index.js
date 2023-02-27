@@ -39,3 +39,12 @@ const user = {
     id: 1,
     name: 'John',
 };
+// Type asssertion
+let cid = 1;
+let customerId = cid;
+let customerId2 = cid;
+// Function
+function addNum(x, y) {
+    return x + y;
+}
+console.log(addNum(1, 3));

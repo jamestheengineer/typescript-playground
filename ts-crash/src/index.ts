@@ -49,3 +49,17 @@ const user: User = {
   id: 1,
   name: 'John',
 };
+
+// Type asssertion
+let cid: any = 1;
+let customerId = <number>cid;
+let customerId2 = cid as number;
+
+// Function
+function addNum(x: number, y: number): number {
+  return x + y;
+}
+
+function log(message: string | number): void {
+  console.log(message);
+}
