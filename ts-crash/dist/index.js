@@ -47,4 +47,30 @@ let customerId2 = cid;
 function addNum(x, y) {
     return x + y;
 }
-console.log(addNum(1, 3));
+function log(message) {
+    console.log(message);
+}
+const user1 = {
+    id: 1,
+    name: 'John',
+};
+const p1 = 1;
+const add = (x, y) => x + y;
+const sub = (x, y) => x - y;
+// Classes
+class Person {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    register() {
+        return `${this.name} is now registered`;
+    }
+}
+class Employee extends Person {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
+const emp = new Employee(3, 'Shawn', 'Developer');
