@@ -88,3 +88,23 @@ interface MathFunc {
 
 const add: MathFunc = (x: number, y: number): number => x + y;
 const sub: MathFunc = (x: number, y: number): number => x - y;
+
+// Classes
+class Person {
+  private id: number;
+  protected name: string;
+  public goAhead: string;
+
+  constructor(id: number, name: string, change: string) {
+    this.id = id;
+    this.name = name;
+    this.goAhead = change;
+  }
+
+  register() {
+    return `${this.name} is now registered`;
+  }
+}
+
+const jeff = new Person(1, 'Jeff Lala', 'blah');
+jeff.goAhead = 'bleh';
