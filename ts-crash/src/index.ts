@@ -125,7 +125,13 @@ function getArray<T>(items: T[]): T[] {
   return new Array().concat(items);
 }
 
-let numArray = getArray([1, 2, 3, 4]);
-let stringArray = getArray(['brad', 'john', 'jill']);
+let numArray = getArray<number>([1, 2, 3, 4]);
+let stringArray = getArray<string>(['brad', 'john', 'jill']);
 
 // nah - numArray.push('hello');
+
+// Last comment is about using TS with a react app
+// npx create-react app . --template typescript
+// .ts and .tsx files
+
+// Fin
